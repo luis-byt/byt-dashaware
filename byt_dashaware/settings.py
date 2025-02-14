@@ -253,7 +253,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'core.User'
 
 SUGARCRM =  {
-    'HOST': '127.0.0.1', # 77.243.85.72
+    'HOST': '77.243.85.72', # 77.243.85.72
     'PORT': 3306,
     'DATABASE': 'wwwsugaronweb_ismcrm',
     'USER': 'awdbadm',
