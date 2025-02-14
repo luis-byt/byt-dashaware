@@ -1,5 +1,6 @@
 .DS_Store
 /* /dist */
+/* /staticfiles */
 #media
 #__pycache__
 *.pyc
