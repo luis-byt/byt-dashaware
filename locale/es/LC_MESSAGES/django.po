@@ -1,0 +1,52 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-13 12:51-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+
+#: byt_dashaware/settings.py:46
+msgid "Dashboard"
+msgstr "Tablero de mando"
+
+#: byt_dashaware/settings.py:49
+msgid "Home"
+msgstr "Inicio"
+
+#: byt_dashaware/settings.py:58
+msgid "Security"
+msgstr "Seguridad"
+
+#: byt_dashaware/settings.py:61
+msgid "Users"
+msgstr "Usuarios"
+
+#: byt_dashaware/settings.py:67
+msgid "Groups"
+msgstr "Grupos"
+
+#: byt_dashaware/settings.py:75
+msgid "Base"
+msgstr "Base"
+
+#: byt_dashaware/settings.py:79
+msgid "Patients"
+msgstr "Pacientes"
+
+#: byt_dashaware/settings.py:86
+msgid "Notes"
+msgstr "Notas"

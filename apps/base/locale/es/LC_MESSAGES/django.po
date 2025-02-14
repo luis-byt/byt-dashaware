@@ -1,0 +1,155 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-13 13:09-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+
+#: apps/base/admin.py:64
+msgid "Patients"
+msgstr "Pacientes"
+
+#: apps/base/admin.py:67 apps/base/admin.py:145
+#, python-format
+msgid "Export selected %(verbose_name_plural)s"
+msgstr "Exportar los %(verbose_name_plural)s seleccionados"
+
+#: apps/base/admin.py:71 apps/base/admin.py:172
+msgid "Sync up"
+msgstr "Sincronizar"
+
+#: apps/base/admin.py:74
+msgid "Patients synced correctly."
+msgstr "Pacientes sincronizados correctamente"
+
+#: apps/base/admin.py:80 apps/base/admin.py:181
+msgid "ID"
+msgstr "ID"
+
+#: apps/base/admin.py:91 apps/base/admin_filters.py:9
+msgid "full name"
+msgstr "nombre completo"
+
+#: apps/base/admin.py:98
+msgid "phones"
+msgstr "teléfonos"
+
+#: apps/base/admin.py:104 apps/base/models.py:26 apps/base/resources.py:16
+msgid "birthdate"
+msgstr "fecha de nacimiento"
+
+#: apps/base/admin.py:110 apps/base/admin.py:198 apps/base/models.py:19
+#: apps/base/models.py:69 apps/base/resources.py:19 apps/base/resources.py:99
+msgid "date joined"
+msgstr "fecha de alta"
+
+#: apps/base/admin.py:116 apps/base/admin.py:204 apps/base/models.py:20
+#: apps/base/models.py:70 apps/base/resources.py:20 apps/base/resources.py:100
+msgid "modified date"
+msgstr "fecha de modificación"
+
+#: apps/base/admin.py:142
+msgid "Notes"
+msgstr "Notas"
+
+#: apps/base/admin.py:168
+#, python-format
+msgid "Update selected %(verbose_name_plural)s"
+msgstr "Actualizar los %(verbose_name_plural)s seleccionados"
+
+#: apps/base/admin.py:175
+msgid "Notes synced correctly."
+msgstr "Notas sincronizadas correctamente"
+
+#: apps/base/admin_filters.py:26
+msgid "patient full name"
+msgstr "nombre completo del paciente"
+
+#: apps/base/admin_filters.py:43 apps/base/admin_filters.py:82
+#: apps/base/models.py:71 apps/base/resources.py:97
+msgid "reason"
+msgstr "motivo"
+
+#: apps/base/models.py:18 apps/base/models.py:64 apps/base/resources.py:10
+#: apps/base/resources.py:96
+msgid "id"
+msgstr "id"
+
+#: apps/base/models.py:21 apps/base/resources.py:11
+msgid "first name"
+msgstr "nombre"
+
+#: apps/base/models.py:22 apps/base/resources.py:12
+msgid "last name"
+msgstr "apellidos"
+
+#: apps/base/models.py:23 apps/base/resources.py:13
+msgid "phone home"
+msgstr "teléfono de casa"
+
+#: apps/base/models.py:24 apps/base/resources.py:14
+msgid "mobile"
+msgstr "celular"
+
+#: apps/base/models.py:25 apps/base/resources.py:15
+msgid "email"
+msgstr "correo electrónico"
+
+#: apps/base/models.py:27 apps/base/resources.py:17
+msgid "gender"
+msgstr "género"
+
+#: apps/base/models.py:29 apps/base/resources.py:18
+msgid "referred by"
+msgstr "referido por"
+
+#: apps/base/models.py:33
+msgid ""
+"Enter the name of the person or entity who referred you to our clinic "
+"(optional)."
+msgstr ""
+"Indica el nombre de la persona o entidad que te recomendó nuestra clínica (opcional)."
+
+#: apps/base/models.py:37 apps/base/models.py:66
+msgid "patient"
+msgstr "paciente"
+
+#: apps/base/models.py:38
+msgid "patients"
+msgstr "pacientes"
+
+#: apps/base/models.py:73 apps/base/resources.py:98
+msgid "description"
+msgstr "descripción"
+
+#: apps/base/models.py:74
+msgid ""
+"A brief description of the patient's reason and/or objective in the clinic"
+msgstr ""
+"Una breve descripción del motivo y/o objetivo del paciente en la clínica"
+
+#: apps/base/models.py:80
+msgid "note"
+msgstr "nota"
+
+#: apps/base/models.py:81
+msgid "notes"
+msgstr "notas"
+
+#: apps/base/resources.py:9 apps/base/resources.py:95
+msgid "no."
+msgstr "no."

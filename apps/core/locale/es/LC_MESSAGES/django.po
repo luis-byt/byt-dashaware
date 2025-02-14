@@ -1,0 +1,383 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-13 12:02-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps/core/admin_filters.py:35 apps/core/admin_filters.py:93
+msgid "All"
+msgstr "Todos"
+
+#: apps/core/admin_filters.py:59 apps/core/admin_filters.py:82
+#: apps/core/admin_filters.py:99 apps/core/admin_filters.py:114
+#: apps/core/admin_filters.py:126
+msgid "By {}"
+msgstr "Por {}"
+
+#: apps/core/models.py:7
+msgid "description"
+msgstr "descripción"
+
+#: apps/core/models.py:10
+msgid "group"
+msgstr "grupo"
+
+#: apps/core/models.py:11 apps/core/models.py:24
+msgid "groups"
+msgstr "grupos"
+
+#: apps/core/models.py:18
+msgid "username"
+msgstr "usuario"
+
+#: apps/core/models.py:19
+msgid "email"
+msgstr "correo electrónico"
+
+#: apps/core/models.py:20
+msgid "phone"
+msgstr "teléfono"
+
+#: apps/core/models.py:21
+msgid "image"
+msgstr "imagen"
+
+#: apps/core/templates/admin/actions.html:22
+msgid "Run the selected action"
+msgstr "Ejecutar la acción seleccionada"
+
+#: apps/core/templates/admin/actions.html:23
+msgid "Run"
+msgstr "Ejecutar"
+
+#: apps/core/templates/admin/actions.html:43
+msgid "Click here to select the objects across all pages"
+msgstr "Haz clic aquí para seleccionar los objetos en todas las páginas"
+
+#: apps/core/templates/admin/actions.html:44
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr "Seleccionar todos %(total_count)s %(module_name)s"
+
+#: apps/core/templates/admin/actions.html:50
+msgid "Clear selection"
+msgstr "Limpiar selección"
+
+#: apps/core/templates/admin/app_index.html:5
+#: apps/core/templates/admin/base_site.html:3
+#: apps/core/templates/admin/index.html:7
+#: apps/core/templates/core/dashboard.html:12
+msgid "Django site admin"
+msgstr "Adminitración de Django"
+
+#: apps/core/templates/admin/app_index.html:15
+#: apps/core/templates/admin/auth/user/change_password.html:13
+#: apps/core/templates/admin/base.html:23
+#: apps/core/templates/admin/change_form.html:18
+#: apps/core/templates/admin/change_list.html:31
+#: apps/core/templates/admin/delete_confirmation.html:17
+#: apps/core/templates/admin/delete_selected_confirmation.html:17
+#: apps/core/templates/admin/object_history.html:9
+msgid "Home"
+msgstr "Inicio"
+
+#: apps/core/templates/admin/app_index.html:30
+#: apps/core/templates/admin/base_site.html:6
+#: apps/core/templates/admin/index.html:12
+#: apps/core/templates/core/dashboard.html:18
+msgid "Django administration"
+msgstr "Adminitración de Django"
+
+#: apps/core/templates/admin/app_list.html:12
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr "Modelos en la aplicación %(name)s"
+
+#: apps/core/templates/admin/app_list.html:47
+msgid "You don’t have permission to view or edit anything."
+msgstr "No tienes permisos para ver o editar nada."
+
+#: apps/core/templates/admin/auth/user/add_form.html:7
+msgid ""
+"First, enter a username and password. Then, you’ll be able to edit more user "
+"options."
+msgstr "Primero, introduce un nombre de usuario y una contraseña. Después, podrás editar más opciones de usuario."
+
+#: apps/core/templates/admin/auth/user/add_form.html:9
+msgid "Enter a username and password."
+msgstr "Introduce un nombre de usuario y una contraseña."
+
+#: apps/core/templates/admin/auth/user/change_password.html:25
+#: apps/core/templates/admin/auth/user/change_password.html:55
+msgid "Change password"
+msgstr "Cambiar contraseña"
+
+#: apps/core/templates/admin/auth/user/change_password.html:44
+#, python-format
+msgid "Enter a new password for the user <strong>%(username)s</strong>."
+msgstr "Introduce una nueva contraseña para el usuario <strong>%(username)s</strong>."
+
+#: apps/core/templates/admin/change_form.html:32
+#: apps/core/templates/admin/change_list_results.html:90
+#, python-format
+msgid "Add %(name)s"
+msgstr "Añadir %(name)s"
+
+#: apps/core/templates/admin/change_form_object_tools.html:6
+#: apps/core/templates/admin/object_history.html:21
+msgid "History"
+msgstr "Historia"
+
+#: apps/core/templates/admin/change_form_object_tools.html:12
+#: apps/core/templates/admin/edit_inline/stacked.html:71
+msgid "View on site"
+msgstr "Ver el sitio"
+
+#: apps/core/templates/admin/change_list.html:72
+msgid "Filters"
+msgstr "Filtros"
+
+#: apps/core/templates/admin/change_list_results.html:28
+msgid "Select all rows"
+msgstr "Seleccionar todas las filas"
+
+#: apps/core/templates/admin/change_list_results.html:42
+msgid "Toggle sorting"
+msgstr "Cambiar orden"
+
+#: apps/core/templates/admin/change_list_results.html:50
+msgid "Remove from sorting"
+msgstr "Eliminar el orden"
+
+#: apps/core/templates/admin/change_list_results.html:56
+#, python-format
+msgid "Sorting priority: %(priority_number)s"
+msgstr "Prioridad en el orden: %(priority_number)s"
+
+#: apps/core/templates/admin/change_list_results.html:98
+msgid "No results found"
+msgstr "No se encontraron resultados"
+
+#: apps/core/templates/admin/change_list_results.html:102
+msgid ""
+"This page yielded into no results. Create a new item or reset your filters."
+msgstr "Esta página no arrojó resultados. Crea un nuevo elemento o reinicia tus filtros."
+
+#: apps/core/templates/admin/change_list_results.html:116
+msgid "Reset filters"
+msgstr "Limpiar filtros"
+
+#: apps/core/templates/admin/delete_confirmation.html:37
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would result in deleting "
+"related objects, but your account doesn't have permission to delete the "
+"following types of objects:"
+msgstr ""
+"Eliminar el %(object_name)s '%(escaped_object)s' resulta "
+"en la eliminación de objetos relacionados, pero tu cuenta no tiene permiso para eliminar "
+"los siguientes tipos de objetos:"
+
+#: apps/core/templates/admin/delete_confirmation.html:53
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would require deleting the "
+"following protected related objects:"
+msgstr ""
+"Eliminar el %(object_name)s '%(escaped_object)s' requiere eliminar "
+"los siguientes objetos relacionados protegidos:"
+
+#: apps/core/templates/admin/delete_confirmation.html:69
+#, python-format
+msgid ""
+"Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? "
+"All of the following related items will be deleted:"
+msgstr ""
+"¿Estás seguro de que deseas eliminar el %(object_name)s \"%(escaped_object)s\"? "
+"Todos los siguientes elementos relacionados serán eliminados:"
+
+#: apps/core/templates/admin/delete_confirmation.html:76
+#: apps/core/templates/admin/delete_selected_confirmation.html:71
+msgid "Objects"
+msgstr "Objetos"
+
+#: apps/core/templates/admin/delete_selected_confirmation.html:27
+msgid "Delete multiple objects"
+msgstr "Borrar multiples registros"
+
+#: apps/core/templates/admin/delete_selected_confirmation.html:37
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would result in deleting related "
+"objects, but your account doesn't have permission to delete the following "
+"types of objects:"
+msgstr ""
+"Eliminar los %(objects_name)s seleccionados resultaría en la eliminación "
+"de objetos relacionados, pero tu cuenta no tiene permiso para eliminar "
+"los siguientes tipos de objetos:"
+
+#: apps/core/templates/admin/delete_selected_confirmation.html:50
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would require deleting the following "
+"protected related objects:"
+msgstr ""
+"Eliminar los %(objects_name)s seleccionados requeriría eliminar "
+"los siguientes objetos relacionados protegidos:"
+
+#: apps/core/templates/admin/delete_selected_confirmation.html:64
+#, python-format
+msgid ""
+"Are you sure you want to delete the selected %(objects_name)s? All of the "
+"following objects and their related items will be deleted:"
+msgstr ""
+"¿Estás seguro de que deseas eliminar los %(objects_name)s seleccionados? "
+"Todos los siguientes objetos y sus elementos relacionados serán eliminados:"
+
+#: apps/core/templates/admin/edit_inline/stacked.html:57
+msgid "Change"
+msgstr "Cambiar"
+
+#: apps/core/templates/admin/edit_inline/stacked.html:59
+msgid "View"
+msgstr "Ver"
+
+#: apps/core/templates/admin/filter.html:5
+#, fuzzy, python-format
+#| msgid "By %(filter_title)s"
+msgid " By %(filter_title)s "
+msgstr "Por %(filter_title)s"
+
+#: apps/core/templates/admin/includes/object_delete_summary.html:5
+msgid "Summary"
+msgstr "Resumen"
+
+#: apps/core/templates/admin/login.html:31
+msgid "Welcome back to"
+msgstr "Bienvenido de regreso"
+
+#: apps/core/templates/admin/login.html:44
+#, python-format
+msgid ""
+"You are authenticated as %(username)s, but are not authorized to access this "
+"page. Would you like to login to a different account?"
+msgstr ""
+"Estás autenticado como %(username)s, pero no estás autorizado para acceder a esta página. "
+"¿Te gustaría iniciar sesión con una cuenta diferente?"
+
+#: apps/core/templates/admin/login.html:67
+msgid "Log in"
+msgstr "Iniciar sesión"
+
+#: apps/core/templates/admin/login.html:76
+msgid "Forgotten your password or username?"
+msgstr "¿Olvidó su contraseña o nombre de usuario?"
+
+#: apps/core/templates/admin/login.html:88
+msgid "Return to site"
+msgstr "Regresar al sitio"
+
+#: apps/core/templates/admin/object_history.html:34
+#: apps/core/templates/admin/object_history.html:50
+msgid "Date/time"
+msgstr "Fecha/hora"
+
+#: apps/core/templates/admin/object_history.html:38
+#: apps/core/templates/admin/object_history.html:54
+msgid "User"
+msgstr "Usuario"
+
+#: apps/core/templates/admin/object_history.html:42
+#: apps/core/templates/admin/object_history.html:58
+msgid "Action"
+msgstr "Acción"
+
+#: apps/core/templates/admin/object_history.html:81
+msgid "entry"
+msgid_plural "entries"
+msgstr[0] "registro"
+msgstr[1] "registros"
+
+#: apps/core/templates/admin/object_history.html:84
+msgid ""
+"This object doesn’t have a change history. It probably wasn’t added via this "
+"admin site."
+msgstr ""
+"Este objeto no tiene un historial de cambios. Probablemente no fue agregado "
+"a través de este sitio de administración."
+
+#: apps/core/templates/admin/pagination.html:31
+msgid "Show all"
+msgstr "Mostrar todos"
+
+#: apps/core/templates/admin/pagination.html:38
+#: apps/core/templates/admin/submit_line.html:10
+msgid "Save"
+msgstr "Guardar"
+
+#: apps/core/templates/admin/search_form.html:7
+msgid "Type to search"
+msgstr "Escriba para buscar"
+
+#: apps/core/templates/admin/submit_line.html:23
+msgid "Save and continue editing"
+msgstr "Guardar y continuar editando"
+
+#: apps/core/templates/admin/submit_line.html:25
+msgid "Save and view"
+msgstr "Guardar y continuar viendo"
+
+#: apps/core/templates/admin/submit_line.html:32
+msgid "Save and add another"
+msgstr "Guardar y añadir otro"
+
+#: apps/core/templates/admin/submit_line.html:38
+msgid "Save as new"
+msgstr "Guardar y añadir otro"
+
+#: apps/core/templates/admin/submit_line.html:47
+msgid "Close"
+msgstr "Cerrado"
+
+#: apps/core/templates/admin/submit_line.html:56
+msgid "Delete"
+msgstr "Borrar"
+
+#: apps/core/templates/core/filters/filters_date_range.html:5
+#: apps/core/templates/core/filters/filters_datetime_range.html:5
+#: apps/core/templates/core/filters/filters_numeric_range.html:5
+#: apps/core/templates/core/filters/filters_numeric_single.html:5
+#: apps/core/templates/core/filters/filters_numeric_slider.html:7
+#, python-format
+msgid "By %(filter_title)s"
+msgstr "Por %(filter_title)s"
+
+#: apps/core/templates/core/filters/filters_numeric_slider.html:30
+msgid "Not enough data."
+msgstr "No hay suficientes datos."
+
+#~ msgid "this email is already used by an registered user."
+#~ msgstr "este correo electrónico ya es utilizado por un usuario registrado."
+
+#~ msgid "this phone is already used by an registered user."
+#~ msgstr "este teléfono ya lo utiliza un usuario registrado."
+
+#~ msgid "password and confirmation must match."
+#~ msgstr "la contraseña y la confirmación deben coincidir."
+
+#~ msgid "This date seems from future, or am i wrong."
+#~ msgstr "Esta fecha parece del futuro, o estoy equivocado."
