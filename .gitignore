@@ -1,4 +1,21 @@
-__pycache__/
-staticfiles/
-.idea/
-.git/
+.DS_Store
+/* /dist */
+#media
+#__pycache__
+*.pyc
+
+# local env files
+.env.local
+.env.*.local
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+#archivos
+todo.wiki
