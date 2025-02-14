@@ -246,7 +246,18 @@ LOCALE_PATHS = [
 
 USE_TZ = True
 
+STATIC_ROOT = str(BASE_DIR / 'staticfiles')
+
 STATIC_URL = "static/"
+
+STATICFILES_FINDERS = [
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+]
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = str(BASE_DIR / 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
