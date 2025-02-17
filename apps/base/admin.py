@@ -49,6 +49,7 @@ class PatientAdmin(ImportExportMixin, ModelAdmin):
         ("date_joined", CustomRangeDateFilter),
         ("modified_date", CustomRangeDateFilter),
         PatientReasonFilter,
+        ("notes__description", FieldTextFilter)
     )
     inlines = [NoteInLine]
     actions = ['export']
@@ -81,14 +82,10 @@ class PatientAdmin(ImportExportMixin, ModelAdmin):
     get_id.allow_tags = True
 
     def full_name(self, instance):
-        # url = reverse("admin:base_patient_change", args=[instance.id])
-        # return format_html(
-        #     '<a href="{}" style="font-weight: bold; color: #c084fc;">{}</a>',
-        #     url, instance.get_full_name()
-        # )
         return instance.get_full_name()
 
     full_name.short_description = _('full name')
+    full_name.admin_order_field = "first_name"
 
     def get_phones(self, instance):
         if len(instance.get_phones()) > 0:
@@ -108,6 +105,7 @@ class PatientAdmin(ImportExportMixin, ModelAdmin):
         return instance.date_joined.strftime('%d/%m/%Y') if instance.date_joined else None
 
     get_date_joined.short_description = _('date joined')
+    get_date_joined.admin_order_field = "date_joined"
     get_date_joined.allow_tags = True
 
     def get_modified_date(self, instance):
@@ -126,6 +124,7 @@ class NoteAdmin(ImportExportMixin, ModelAdmin):
     list_filter = (
         PatientFullNameFilter,
         ReasonFilter,
+        ("description", FieldTextFilter),
         ("date_joined", CustomRangeDateFilter),
         ("modified_date", CustomRangeDateFilter),
     )
@@ -146,22 +145,24 @@ class NoteAdmin(ImportExportMixin, ModelAdmin):
 
     def update(self, request, queryset):
         for item in queryset.all():
-            item.reason ='Laboratorio'
+            item.reason ='Antiinflamatorio'
             item.save()
 
             '''
-            Nutrición:      3219
-            Seguimiento:    21431
-            Tratamiento:    46
-            Laboratorio:    214
-            Comentario:     292
-            Inbody:         5505
-            Consulta:       188
-            Receta:         138
-            Obesidad:       30
-            Dieta:          388
-            --------------------
-            Otros:          5326
+            Nutrición:          3219
+            Seguimiento:        21431
+            Tratamiento:        46
+            Laboratorio:        214
+            Eliminación         284
+            Antiinflamatorio    1426
+            Comentario:         292
+            Inbody:             5505
+            Consulta:           188
+            Receta:             138
+            Obesidad:           30
+            Dieta:              388
+            ------------------------
+            Otros:              3616
             '''
             # print(item.reason) # Homogenizar la info para un solo reason, algo como un nomenclador
 
@@ -191,6 +192,7 @@ class NoteAdmin(ImportExportMixin, ModelAdmin):
         return "-"
 
     patient_link.short_description = "Patient"
+    patient_link.admin_order_field = "patient"
 
     def get_date_joined(self, instance):
         return instance.date_joined.strftime('%d/%m/%Y') if instance.date_joined else None

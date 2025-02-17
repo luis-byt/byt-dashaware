@@ -65,7 +65,7 @@ class TextFilter(admin.SimpleListFilter):
 
 class FieldTextFilter(FieldTextFilter):
     template = "core/filters/filters_field.html"
-    form_class = SearchForm
+    # form_class = SearchForm
 
     def __init__(self, field, request, params, model, model_admin, field_path):
         self.lookup_kwarg = f"{field_path}__icontains"

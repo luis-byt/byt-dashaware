@@ -13,7 +13,7 @@ UNFOLD = {
     "SHOW_HISTORY": True,
     "SHOW_VIEW_ON_SITE": True,
     "ENVIRONMENT": "byt_dashaware.settings.environment_callback",
-    "DASHBOARD_CALLBACK": "byt_dashaware.settings.dashboard_callback",
+    "DASHBOARD_CALLBACK": "apps.base.views.dashboard_callback",
     "COLORS": {
         "primary": {
             "50": "250 245 255",
@@ -122,18 +122,6 @@ UNFOLD = {
     },
 }
 
-def dashboard_callback(request, context):
-    """
-    Callback to prepare custom variables for index template which is used as dashboard
-    template. It can be overridden in application by creating custom admin/index.html.
-    """
-    context.update(
-        {
-            "sample": "example",  # this will be injected into templates/admin/index.html
-        }
-    )
-    return context
-
 
 def environment_callback(request):
     return ["Production", "danger"]
@@ -188,7 +176,7 @@ ROOT_URLCONF = "byt_dashaware.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        'DIRS': [BASE_DIR / 'templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -264,7 +252,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'core.User'
 
 SUGARCRM =  {
-    'HOST': '77.243.85.72', # 77.243.85.72
+    'HOST': '127.0.0.1', # 77.243.85.72
     'PORT': 3306,
     'DATABASE': 'wwwsugaronweb_ismcrm',
     'USER': 'awdbadm',

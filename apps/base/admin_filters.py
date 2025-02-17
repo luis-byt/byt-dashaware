@@ -49,13 +49,15 @@ class ReasonFilter(DropdownFilter):
             ('Seguimiento', 'Seguimiento'),
             ('Tratamiento', 'Tratamiento'),
             ('Laboratorio', 'Laboratorio'),
+            ('Eliminación', 'Eliminación'),
+            ('Antiinflamatorio', 'Antiinflamatorio'),
             ('Comentario', 'Comentario'),
             ('Inbody', 'Inbody'),
             ('Consulta', 'Consulta'),
             ('Receta', 'Receta'),
             ('Obesidad', 'Obesidad'),
             ('Dieta', 'Dieta'),
-            ('Otros', 'Otros'),  # Agregar opción para notas sin coincidencias en el título
+            ('Otros', 'Otros'),
         ]
 
     def queryset(self, request, queryset):
@@ -66,6 +68,8 @@ class ReasonFilter(DropdownFilter):
                     Q(reason__icontains="Seguimiento") |
                     Q(reason__icontains="Tratamiento") |
                     Q(reason__icontains="Laboratorio") |
+                    Q(reason__icontains="Eliminación") |
+                    Q(reason__icontains="Antiinflamatorio") |
                     Q(reason__icontains="Comentario") |
                     Q(reason__icontains="Inbody") |
                     Q(reason__icontains="Consulta") |
@@ -88,13 +92,15 @@ class PatientReasonFilter(DropdownFilter):
             ('Seguimiento', 'Seguimiento'),
             ('Tratamiento', 'Tratamiento'),
             ('Laboratorio', 'Laboratorio'),
+            ('Eliminación', 'Eliminación'),
+            ('Antiinflamatorio', 'Antiinflamatorio'),
             ('Comentario', 'Comentario'),
             ('Inbody', 'Inbody'),
             ('Consulta', 'Consulta'),
             ('Receta', 'Receta'),
             ('Obesidad', 'Obesidad'),
             ('Dieta', 'Dieta'),
-            ('Otros', 'Otros'),  # Agregar opción para notas sin coincidencias en el título
+            ('Otros', 'Otros'),
         ]
 
     def queryset(self, request, queryset):
@@ -105,6 +111,8 @@ class PatientReasonFilter(DropdownFilter):
                     Q(notes__reason__icontains="Seguimiento") |
                     Q(notes__reason__icontains="Tratamiento") |
                     Q(notes__reason__icontains="Laboratorio") |
+                    Q(notes__reason__icontains="Eliminación") |
+                    Q(notes__reason__icontains="Antiinflamatorio") |
                     Q(notes__reason__icontains="Comentario") |
                     Q(notes__reason__icontains="Inbody") |
                     Q(notes__reason__icontains="Consulta") |

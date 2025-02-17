@@ -1,0 +1,126 @@
+{% extends 'unfold/layouts/base_simple.html' %}
+
+{% load i18n %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block title %}
+    {% if subtitle %}
+        {{ subtitle }} |
+    {% endif %}
+    {{ title }} | {{ site_title|default:_('Django site admin') }}
+{% endblock %}
+
+{% block branding %}
+
+{% endblock %}
+
+{% block content %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<h1 class="text-xl font-bold text-gray-800">
+    📊 Dashboard de
+    <span class="text-primary-600">AWARE</span>
+</h1>
+
+<div class="grid lg:grid-cols-3 sm:grid-cols-1 gap-6 mt-6">
+    <div class="shadow-lg rounded-lg p-6">
+        <h2 class="text-xl font-semibold">📊 Pacientes por Mes (Año Anterior)</h2>
+        <canvas class="mt-2" id="patientsLastYearChart"></canvas>
+    </div>
+
+    <div class="shadow-lg rounded-lg p-6 hover:scale-105 transition-transform">
+        <h2 class="text-xl font-semibold text-gray-700">📅 Citas por Mes (Año Anterior)</h2>
+        <canvas class="mt-2" id="notesLastYearChart"></canvas>
+    </div>
+
+    <div class="shadow-lg rounded-lg p-6 hover:scale-105 transition-transform">
+        <h2 class="text-xl font-semibold text-gray-700">📈 Pacientes más recurrentes</h2>
+        <ol class="list-decimal mt-2">
+        {% for patient in top_patients %}
+          <li class="rounded-lg shadow-lg py-3 mt-1">
+              <div class="flex">
+                  <div class="flex-grow">
+                      <p class="text-2xl font-bold text-primary-600">{{ patient.get_full_name }}</p>
+                  </div>
+                  <div class="flex-none rounded-full px-3 bg-primary-600">
+                      <p class="text-2xl font-semibold text-white">{{ patient.visit_count }}</p>
+                  </div>
+              </div>
+          </li>
+        {% endfor %}
+        </ol>
+    </div>
+</div>
+
+<div class="grid lg:grid-cols-2 sm:grid-cols-1 gap-6 mt-6">
+    <div class="shadow-lg rounded-lg p-6">
+        <h2 class="text-xl font-semibold text-gray-700">📊 Pacientes por Tipo</h2>
+        <canvas id="patientsByReason"></canvas>
+    </div>
+
+    <div class="shadow-lg rounded-lg p-6">
+        <h2 class="text-xl font-semibold text-gray-700">📊 Consultas por Tipo</h2>
+        <canvas id="notesByReason"></canvas>
+    </div>
+</div>
+
+<script>
+    var ctx0 = document.getElementById('patientsLastYearChart').getContext('2d');
+    var patientsLastYearChart = new Chart(ctx0, {
+        type: 'line',
+        data: {
+            labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+            datasets: [{
+                label: 'Pacientes del Año Anterior',
+                data: {{ patients_last_year_for_month.values|safe }},
+                borderColor: '#36A2EB',
+                fill: false
+            }]
+        }
+    });
+
+    var ctx01 = document.getElementById('notesLastYearChart').getContext('2d');
+    var notesLastYearChart = new Chart(ctx01, {
+        type: 'line',
+        data: {
+            labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+            datasets: [{
+                label: 'Pacientes del Año Anterior',
+                data: {{ notes_last_year_for_month.values|safe }},
+                borderColor: '#36A2EB',
+                fill: false
+            }]
+        }
+    });
+
+    var ctx = document.getElementById('patientsByReason').getContext('2d');
+    var patientsByReasonChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: {{ patients_segments.labels|safe }},
+            datasets: [{
+                label: 'Cantidad de pacientes',
+                data: {{ patients_segments.values|safe }},
+                backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF',
+                                  '#FF9F40', '#4BC0C0', '#C9CBCF', '#FFCD56', '#A2E636'],
+            }]
+        }
+    });
+
+    var ctx1 = document.getElementById('notesByReason').getContext('2d');
+    var notesByReasonChart = new Chart(ctx1, {
+        type: 'bar',
+        data: {
+            labels: {{ notes_segments.labels|safe }},
+            datasets: [{
+                label: 'Cantidad de consultas',
+                data: {{ notes_segments.values|safe }},
+                backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF',
+                                  '#FF9F40', '#4BC0C0', '#C9CBCF', '#FFCD56', '#A2E636'],
+            }]
+        }
+    });
+</script>
+
+{% endblock %}

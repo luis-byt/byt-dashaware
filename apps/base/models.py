@@ -60,6 +60,7 @@ class Patient(models.Model):
 
         return phones
 
+
 class Note(models.Model):
     id = models.CharField(max_length=36, verbose_name=_("id"), primary_key=True)
     patient = models.ForeignKey(
@@ -79,7 +80,7 @@ class Note(models.Model):
     class Meta:
         verbose_name = _("note")
         verbose_name_plural = _("notes")
-        ordering = ("-date_joined", "reason")
+        ordering = ("-date_joined", "reason", "patient")
 
     def __str__(self):
         return self.reason
